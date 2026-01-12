@@ -1,4 +1,22 @@
-employees = []
+import json
+import os
+
+FILE_NAME = "Mini_Project_1/employees.json"
+
+def load_data():
+    if os.path.exists(FILE_NAME):
+        with open(FILE_NAME, 'r') as file:
+            try:
+                return json.load(file)
+            except:
+                return []
+    return []
+
+employees = load_data()
+
+def save_data():
+    with open(FILE_NAME, 'w') as file:
+        json.dump(employees, file, indent=4)
 
 def menu():
     print("Enter option from below: ")
@@ -26,6 +44,7 @@ def add_employee():
     }
 
     employees.append(employee)
+    save_data()
     print("\nEmployee Added Sucessfully\n")
 
 def view_employee():
@@ -115,6 +134,7 @@ def update_item():
         update_age()
     else:
         print("\nPlease make a valid choice.\n")
+    save_data()
 
 def delete_item():
     if not employees:
@@ -123,6 +143,7 @@ def delete_item():
     for emp in employees:
         if emp_id == emp['id']:
             employees.remove(emp)
+            save_data()
             print("\nEmployee details deleted sucessfully.")
             return
     print("Employee not found.")
