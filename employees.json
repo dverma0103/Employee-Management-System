@@ -1,5 +1,6 @@
 [
     {
+<<<<<<< HEAD
         "id": 1,
         "name": "Rahul",
         "age": 27,
@@ -12,5 +13,17 @@
         "age": 24,
         "department": "IQAC",
         "salary": 25000
+=======
+        "id": 22593,
+        "name": "Deepak",
+        "age": 24,
+        "department": "IQAC"
+    },
+    {
+        "id": 22596,
+        "name": "Rahul",
+        "age": 27,
+        "department": "IT"
+>>>>>>> 5ad5d09e7d52ea5b20924181ab279cb7ff55e1e7
     }
 ]
