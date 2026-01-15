@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "name": "Rahul",
+        "age": 27,
+        "department": "IT",
+        "salary": 27000
+    },
+    {
+        "id": 22593,
+        "name": "Deepak Verma",
+        "age": 24,
+        "department": "IQAC",
+        "salary": 25000
+    }
+]
